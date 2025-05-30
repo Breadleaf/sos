@@ -76,7 +76,7 @@ func (c *Client) DeleteObject(bucket, key string) error {
 }
 
 func (c *Client) ListObjects(bucket string) ([]string, error) {
-	url := fmt.Sprintf("%s/buckets/%s/objects")
+	url := fmt.Sprintf("%s/buckets/%s/objects", c.BaseURL, bucket)
 	resp, err := c.HTTPClient.Get(url)
 	if err != nil {
 		return nil, err
