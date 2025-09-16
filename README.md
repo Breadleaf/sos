@@ -26,3 +26,7 @@ really want to run it from anywhere in your file system.
 
 Near all functionality is self documented from the cli tool. To get started run
 `sos` and navigate the menus until I write better docs.
+
+## API
+
+[sos example project](https://github.com/Breadleaf/sos)
