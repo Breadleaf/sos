@@ -1,3 +1,4 @@
-sos
-sos-server
+**/sos-cli
+**/sos-server
+**/sos-dashboard
 data/*

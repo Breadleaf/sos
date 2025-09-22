@@ -14,8 +14,9 @@ For now, until I write a better system in `Makefile`, run the following:
 
 ```bash
 go mod tidy
-go build -o sos ./cli
+go build -o sos-cli ./cli
 go build -o sos-server ./server
+cd ./dashboard && go build -o sos-dashboard # should be ran inside of ./dashboard/
 ```
 
 I would not recommend installing this version of the code until I create
