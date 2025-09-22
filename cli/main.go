@@ -5,13 +5,23 @@ import (
 	"io"
 	"os"
 
-	"github.com/breadleaf/sos/pkg/client"
+	"github.com/breadleaf/sos/pkg/http/client"
 	"github.com/spf13/cobra"
 )
 
+var execName string
+
+func init() {
+	if len(os.Args) <= 0 {
+		fmt.Fprintf(os.Stderr, "program has no os.Args..., unrecoverable")
+		os.Exit(1)
+	}
+	execName = os.Args[0]
+}
+
 func main() {
 	root := &cobra.Command{
-		Use:   "sos",
+		Use: execName,
 		Short: "Simple Object Storage CLI",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return cmd.Help()
